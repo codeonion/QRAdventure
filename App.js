@@ -4,7 +4,7 @@ import Header from './components/Header';
 const App = () => {
   return (
     <View style={styles.contianer}>
-      <Header />
+      <Header title='Shopping List' />
     </View>
   );
 }
