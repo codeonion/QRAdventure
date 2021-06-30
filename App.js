@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
-
+import Header from './components/Header';
 const App = () => {
   return (
     <View style={styles.contianer}>
-      <Text>Hello World</Text>
-      <Text>Hello World</Text>
+      <Header />
     </View>
   );
 }
@@ -13,6 +12,7 @@ const App = () => {
 const styles = StyleSheet.create({
   contianer: {
     flex: 1,
+    paddingTop: 60,
   },
 });
 
