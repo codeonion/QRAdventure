@@ -17,6 +17,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {color:'darkslateblue', fontSize: 30},
-  img:{width:100, height:100},
+  img:{width:100, height:100, borderRadius: 100/2},
 })
 export default App;
