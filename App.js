@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet,FlatList } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Alert } from 'react-native'
 import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -24,9 +24,14 @@ const App = () => {
   }
   
   const addItem = (text) => {
-    setItems(prevItems => {
-      return [{id: uuidv4(), text}, ...prevItems];
-    });
+    if (!text) {
+      Alert.alert("Error", "Cannot add empty records",[{text: "Ok"}]);
+    } else {
+      
+      setItems(prevItems => {
+        return [{id: uuidv4(), text}, ...prevItems];
+      });
+    }
   }
   return (
     <View style={styles.contianer}>
